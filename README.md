@@ -5,8 +5,6 @@ Built a simple Task List using Vanilla Javascript. The UI is built using Materil
 ![ezgif com-video-to-gif](https://user-images.githubusercontent.com/29877236/81630949-dd196400-93d4-11ea-84de-1f4a8195887f.gif)
 
 
-
-
 Added local storage to be able to add, remove, filter, and clear task items.
 
 
