@@ -9,11 +9,17 @@ const taskInput = document.querySelector('#task');
 
 loadEventListeners();
 
-//Loading all even listeners
+//Loading all event listeners
 
 function loadEventListeners() {
 //Add Task event
   form.addEventListener('submit',addTask);
+  
+  // Remove task event
+  taskList.addEventListener('click',removeTask);
+
+  //Clear task events
+  clearBtn.addEventListener('click',clearTasks);
 }
 
 function addTask(e){
@@ -45,8 +51,29 @@ function addTask(e){
 
   taskList.appendChild(li);
 
-  console.log(li);
+  //Clear input
 
-  e.preventDefault
+  taskInput.value= '';
 
+
+  e.preventDefault();
+
+}
+
+// Remove task 
+function removeTask(e){
+  if(e.target.parentElement.classList.contains
+    ('delete-item')) {
+      if(confirm('Are you sure?')) {
+      }
+    e.target.parentElement.parentElement.remove();
+  }
+}
+
+//Clear all of the tasks
+function clearTasks(){
+  while(taskList.firstChild){
+    taskList.removeChild(taskList.firstChild);
+
+  }
 }
